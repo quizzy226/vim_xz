@@ -24,3 +24,6 @@ au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " Link extension to Spice syntax
 au BufNewFile,BufRead *.ckt,*.scs,*.net	set filetype=spice
+
+call pathogen#infect()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
