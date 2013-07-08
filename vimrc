@@ -27,3 +27,6 @@ au BufNewFile,BufRead *.ckt,*.scs,*.net	set filetype=spice
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
+
+" Highlight search results
+set hlsearch
