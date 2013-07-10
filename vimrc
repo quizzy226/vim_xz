@@ -30,3 +30,4 @@ call pathogen#infect()
 
 " Highlight search results
 set hlsearch
+set wildmode=longest:full,list:full
