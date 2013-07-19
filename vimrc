@@ -31,3 +31,7 @@ call pathogen#infect()
 " Highlight search results
 set hlsearch
 set wildmode=longest:full,list:full
+
+" Map for numbers plugin
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
