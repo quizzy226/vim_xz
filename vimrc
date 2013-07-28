@@ -1,10 +1,3 @@
-syntax on
-set number
-colors desert
-
-filetype indent plugin on
-set modeline
-
 if has("gui_running")
     " GUI is running. Maximize window.
     set lines=999 columns=995
@@ -18,15 +11,25 @@ if has("gui_running")
 "    endif
 endif
 
-au FileType c setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
-au FileType cpp setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
-au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+"au FileType c setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+"au FileType cpp setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+"au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " Link extension to Spice syntax
 au BufNewFile,BufRead *.ckt,*.scs,*.net	set filetype=spice
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+"runtime bundle/vim-pathogen/autoload/pathogen.vim
+"call pathogen#infect()
+"execute pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+filetype off
+syntax on
+filetype plugin indent on
+set number
+colors desert
+
+"filetype indent plugin on
+set modeline
 
 " Highlight search results
 set hlsearch
